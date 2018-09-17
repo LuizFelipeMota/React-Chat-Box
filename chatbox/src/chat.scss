@@ -1,0 +1,83 @@
+body {
+    background: #16a085;
+}
+
+.message {
+    position: relative;
+    padding: 10px;
+    min-width: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.message-before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 10px solid;
+    top: 7px;
+}
+
+.message-me{
+    @extend .message;
+    background-color: #FDE4CE ;
+    margin-right: 10px;
+}
+
+.message-other {
+    @extend .message;
+    background: #EEF2E7;
+    margin-left: 10px;
+}
+
+.message-me:before {
+    @extend .message-before;
+    border-color: transparent #FDE4CE transparent transparent;
+    left: -20px;
+}
+
+.message-other:before {
+    @extend .message-before;
+    border-color: transparent transparent transparent #EEF2E7;
+    right: -20px;
+}
+
+.message-box {
+    position: absolute;
+    width: 250px;
+    background-color: white;
+    padding: 15px;
+    height: 300px;
+    overflow: auto;
+    overflow-x: hidden;
+    right: 20px;
+    bottom: 21px;
+    border-radius: 4px;
+}
+
+.message-input {
+    position: fixed;
+    right: 20px;
+    bottom: 0px;
+}
+
+#msg {
+    width: 276px;
+    border-radius: 4px;
+}
+
+.user-login {
+    position: absolute;
+    height: 250px;
+    width: 350px;
+    margin: -100px 0px 0px -200px;
+    top: 50%;
+    left:50%;
+}
+
+#user {
+    margin-left: 30px;
+}
